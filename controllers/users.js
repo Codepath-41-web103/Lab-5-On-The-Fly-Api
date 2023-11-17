@@ -47,7 +47,7 @@ const getUserById = async (req, res) => {
 
 const updateUserbyId = async (req, res) => {
   try {
-    const id = parseInt(req.params.id);
+    const id = req.params.id
     const { name, avatar_url, bio } = req.body;
     const results = await pool.query(
       `UPDATE users
